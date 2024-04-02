@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style.css') }}">
+    <title>Auto Rickshaw Booking</title>
+</head>
+<body class="ok">
+    <nav>   
+        <div class="lol">
+            <p>
+                Rickko
+            </p>
+        </div>
+        <ul>
+            <li><a href="/register">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+            <form action="/book" method="post" class="form">
+                <label for="passenger_name" >Passenger Name:</label>
+                <input type="text" id="passenger_name" class="input" name="passenger_name" required>
+                
+                <label for="pickup_location">Pickup Location:</label>
+                <input type="text" id="pickup_location"class="input" name="pickup_location" required>
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" class="input"name="destination" required>
+                
+                <label for="travel_date">Travel Date:</label>
+                <input type="datetime-local" id="travel_date" class="input" name="travel_date" required>
+                
+                <button type="submit" class="button">Book Now</button>
+            </form>
+       
+    </main>
+    
+    <footer>
+        <p>&copy; Avinash 2024</p>
+        
+    </footer>
+    
+</body>
+</html>

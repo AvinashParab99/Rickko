@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Ride</title>
+</head>
+<body>
+    <h1>Track Your Ride</h1>
+    
+    <form action="/track" method="get">
+        <label for="booking_id">Enter Booking ID:</label>
+        <input type="text" id="booking_id" name="booking_id" required>
+        
+        <button type="submit">Track</button>
+    </form>
+
+    {% if booking_details %}
+        <h2>Booking Details</h2>
+        <p>Booking ID: {{ booking_details.booking_id }}</p>
+        <p>Passenger Name: {{ booking_details.passenger_name }}</p>
+        <p>Pickup Location: {{ booking_details.pickup_location }}</p>
+        <p>Destination: {{ booking_details.destination }}</p>
+        <p>Travel Date: {{ booking_details.travel_date }}</p>
+        <p>Status: {{ booking_details.status }}</p>
+    {% endif %}
+</body>
+</html>
