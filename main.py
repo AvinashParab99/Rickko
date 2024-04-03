@@ -10,16 +10,16 @@ conn = psycopg2.connect(
     host="localhost",
     port=5432,
     database="postgres",
-    user="postgres",
-    password="Avinash"
+    user="",
+    password=""
 )
 cursor = conn.cursor()
 
 
 
-TWILIO_ACCOUNT_SID = "ACad28c5c3168d79c9b116eb7fb14c1d9d"
-TWILIO_AUTH_TOKEN = "e2f040237d018345bb210136cd0b59f2"
-TWILIO_PHONE_NUMBER = '+17178379967'
+TWILIO_ACCOUNT_SID = ""
+TWILIO_AUTH_TOKEN = ""
+TWILIO_PHONE_NUMBER = ''
 
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
@@ -44,7 +44,7 @@ def book():
     return render_template('confirmation.html', message=confirmation_message)
 
 def send_booking_notification(passenger_name, pickup_location, destination, travel_date):
-    driver_phone_number = "+917990985830"  # Replace with the actual driver's phone number
+    driver_phone_number = "+91"  # Replace with the actual driver's phone number
 
     message_body = f"New booking details:\nPassenger: {passenger_name}\nPickup: {pickup_location}\nDestination: {destination}\nTravel Date: {travel_date}"
 
