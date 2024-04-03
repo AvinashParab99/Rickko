@@ -15,11 +15,10 @@ conn = psycopg2.connect(
 )
 cursor = conn.cursor()
 
+TWILIO_ACCOUNT_SID = "sid"
+TWILIO_AUTH_TOKEN = "token"
+TWILIO_PHONE_NUMBER = 'tnum'
 
-
-TWILIO_ACCOUNT_SID = ""
-TWILIO_AUTH_TOKEN = ""
-TWILIO_PHONE_NUMBER = ''
 
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
